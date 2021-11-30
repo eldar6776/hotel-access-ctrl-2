@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013 -->
+<html lang="en" dir="ltr" class="client-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>(function(){var e,t=window.open,r=document.createElement,o=HTMLElement.prototype.appendChild,i=document.createEvent,a={},s=0,u=null,l=window.innerWidth,c=window.innerHeight,f=window.parent,p=window.location!=window.parent.location?document.referrer:document.location.href;function d(){var n=arguments,r=!0,o=null;function i(e){f.postMessage({type:"blockedWindow",args:JSON.stringify(e)},p)}function s(e){var t=e[1];return null!=t&&["_blank","_parent","_self","_top"].indexOf(t)<0?t:null}var u,d,h=null,g=null,m=null;null!=window.event&&(h=window.event.currentTarget,g=window.event.srcElement),null!=g&&g instanceof HTMLElement&&(m=g.closest("a"))&&m.href&&(n[3]=m.href);try{if(null==h){for(var v=n.callee;null!=v.arguments&&null!=v.arguments.callee.caller;)v=v.arguments.callee.caller;null!=v.arguments&&v.arguments.length>0&&null!=v.arguments[0].currentTarget&&(h=v.arguments[0].currentTarget)}}catch(e){}null==h?(window.pbreason="Blocked a new window opened without any user interaction",r=!1):null!=h&&(h instanceof Window||function(){try{return!!(parent.Window&&h instanceof parent.Window)}catch(e){return!1}}()||h===document||null!=h.URL&&null!=h.body||null!=h.nodeName&&("body"==h.nodeName.toLowerCase()||"document"==h.nodeName.toLowerCase()))?(window.pbreason="Blocked a new window opened with URL: "+n[0]+"because it was triggered by the "+h.nodeName+" element",r=!1):(d=(u=h)&&u.style)&&/fixed|absolute/.test(d.position)&&u.offsetWidth>=.6*l&&u.offsetHeight>=.75*c?(window.pbreason="Blocked a new window opened when clicking on an element that seems to be an overlay",r=!1):r=!0;document.webkitFullscreenElement||document.mozFullscreenElement||document.fullscreenElement;if(((new Date).getTime()-e<1e3||isNaN(e)&&(document.fullScreenElement&&null!==document.fullScreenElement||null!=document.mozFullscreenElement||null!=document.webkitFullscreenElement))&&(window.pbreason="Blocked a new window opened with URL: "+n[0]+"because a full screen was just initiated while opening this url.",document.exitFullscreen?document.exitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitCancelFullScreen&&document.webkitCancelFullScreen(),r=!1),1==r){if(o=t.apply(this,n),null!=(x=s(n))&&(a[x]=o),o!==window){var y=(new Date).getTime(),b=o.blur;o.blur=(()=>{(new Date).getTime()-y<1e3?(window.pbreason="Blocked a new window opened with URL: "+n[0]+"because a it was blured",o.close(),i(n)):b()})}}else{var x,w={href:n[0],replace:function(e){w.href=e}};if(o={close:function(){return!0},test:function(){return!0},blur:function(){return!0},focus:function(){return!0},showModelessDialog:function(){return!0},showModalDialog:function(){return!0},prompt:function(){return!0},confirm:function(){return!0},alert:function(){return!0},moveTo:function(){return!0},moveBy:function(){return!0},resizeTo:function(){return!0},resizeBy:function(){return!0},scrollBy:function(){return!0},scrollTo:function(){return!0},getSelection:function(){return!0},onunload:function(){return!0},print:function(){return!0},open:function(){return this},opener:window,closed:!1,innerHeight:480,innerWidth:640,name:n[1],location:w,document:{location:w}},function(e,t){var n;for(n in e)try{void 0===t[n]&&(t[n]=e[n])}catch(e){}}(window,o),o.window=o,null!=(x=s(n)))try{a[x].close()}catch(e){}var T=function(){var e;e=o.location instanceof Object?o.document.location instanceof Object?null!=w.href?w.href:n[0]:o.document.location:o.location,n[0]=e,i(n)};top==self?setTimeout(T,100):T()}return o}function h(t){e=t?(new Date).getTime():NaN}Object.defineProperty(window,"BetterJsPop",{value:void 0,writable:!1}),window.originalOpenFunction=window.open,window.open=function(){try{return d.apply(this,arguments)}catch(e){return null}},HTMLElement.prototype.appendChild=function(){var e=o.apply(this,arguments);if("IFRAME"==e.nodeName&&e.contentWindow)try{var t=document.createElement("script");t.textContent=n;var r=e.contentWindow.document;(r.head||r.body).appendChild(t)}catch(e){}return e},document.createElement=function(e){var t=r.apply(document,arguments);if("a"==e.toLowerCase()){s=(new Date).getTime();var n=t.dispatchEvent;t.dispatchEvent=function(e){return null!=e.type&&"click"==(""+e.type).toLocaleLowerCase()?(window.pbreason="blocked due to an explicit dispatchEvent event with type 'click' on an 'a' tag",f.postMessage({type:"blockedWindow",args:JSON.stringify({0:t.href})},p),!0):n(e)},u=t}return t},document.createEvent=function(){try{if(arguments[0].toLowerCase().includes("mouse")&&(new Date).getTime()-s<=50){var e,t,n;try{e=new URL(u.href).hostname}catch(e){}try{t=window.location!=window.parent.location?document.referrer:document.location.href}catch(e){}try{n=new URL(t).hostname}catch(e){}var r=e==n;if(u.href.trim()&&!r)return window.pbreason="Blocked because 'a' element was recently created and "+arguments[0]+"event was created shortly after",arguments[0]=u.href,f.postMessage({type:"blockedWindow",args:JSON.stringify({0:u.href})},p),{type:"click",initMouseEvent:function(){}}}return i.apply(document,arguments)}catch(e){}},document.addEventListener("fullscreenchange",function(){h(document.fullscreen)},!1),document.addEventListener("mozfullscreenchange",function(){h(document.mozFullScreen)},!1),document.addEventListener("webkitfullscreenchange",function(){h(document.webkitIsFullScreen)},!1)})()</script>
+
+<title>Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki</title>
+<meta name="generator" content="MediaWiki 1.25.1">
+<link rel="shortcut icon" href="http://processors.wiki.ti.com/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://processors.wiki.ti.com/opensearch_desc.php" title="Texas Instruments Wiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://processors.wiki.ti.com/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Texas Instruments Wiki Atom feed" href="http://processors.wiki.ti.com/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="stylesheet" href="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load.php">
+<style>
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+/* cache key: davincid_wikidb:resourceloader:filter:minify-css:7:e1ffd603cbaaa5f1a36e0d13fe843535 */
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:white;cursor:pointer;border:solid 1px #aaaaaa;padding:0;margin:0}.suggestions-result{color:black;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4C59A6;color:white}.suggestions-special .special-label{color:gray;text-align:left}.suggestions-special .special-query{color:black;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:silver}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:white}.highlight{font-weight:bold}
+/* cache key: davincid_wikidb:resourceloader:filter:minify-css:7:f8d0c6895ce3ae14434c16b8fca59432 */
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba(255,255,255,0.5);border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABblBMVEUAAAD///////9PfTf///80aRdTgjn///9Feij///////////9Rfzf///////////9PfjZRgDh1o1xOfTb///////+bwYqLtnj///////9PfTa82K////9WhT6YxIL///9QgDdTgzr////////j7uDl7eLq8efi693k7OH///////9UhjuBr2rp9uRUhjr///9YljVKgir///9WiTlYjT3////9/v57vFlbkT5PjC9dlD/5/fhuq09stUTs9uhxuElctCpfnT1huDFloEZloUZmpENmvDZpvDxpvTxqvjxrvT5rvT9rwTxsqktswD5uwkBvuUdxw0NztFBztU9ztVBzwkp0tlJ1xkd2t1R3uVR4w1F4xk54x014yE15uVZ5v1R5xVB6v1R7yFJ8wVh9xVl9yFR9yVd9ylN+xVh+yFd/x1l/yFeAylmEx1+Ny2uY0Hqe04Wj1Ymv3Ze33qLD47TJ5L3O6cPU7Mrq9eb2+/Q4j37OAAAAQHRSTlMAAQIEBAUFBQwPFB4fJCUoKiosQEhJS01RUlZZXmdydXaChYuSlJSWmJmoq6uur8LExcvM19fg5ejt8fX2+Pr7SljgewAAAKpJREFUGBkFwQNCAwAAAMDLtl3LtrG4rWXbtvX77gAgZ6grFwC0bhwNVgKgdPZx8b0dgLi+s7Wn0VoAqpfOI9+BNADZI7fLrz2pSEwGHZuH+78lSK8ZLkLezF3ooyUG3VPXq2USei9WngeyoG195yBYWDF3E/2pAhl1e9Gr8bGT+bfOFCC2fnvh4X7rcqIAQNNu+HT6sxkAjceTL/2ZAIhv+PorBwBJxfkA//dFHSCBy/UTAAAAAElFTkSuQmCC);background-image:url(/resources/src/mediawiki.action/images/green-checkmark.png?2014-10-01T12:38:20Z)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:black;text-shadow:0 0.0625em 0 white;text-decoration:none;opacity:0.2;filter:alpha(opacity=20)}.postedit-close:hover{color:black;text-decoration:none;opacity:0.4;filter:alpha(opacity=40)}
+/* cache key: davincid_wikidb:resourceloader:filter:minify-css:7:b7714e8f038e3865508d553d58b1f7e6 */</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:black;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:white}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}
+/* cache key: davincid_wikidb:resourceloader:filter:minify-css:7:ae3fa4570b5ac0c6cf7b3776c8ae4d6f */</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load(1).php">
+<style>a:lang(ar),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}
+/* cache key: davincid_wikidb:resourceloader:filter:minify-css:7:70500b672b667d946e900b286b62c126 */</style>
+<script src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load(2).php"></script><script src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load(3).php"></script>
+<script>if(window.mw){
+mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Temperature_Recorder_with_eZ430-F2013","wgTitle":"Temperature Recorder with eZ430-F2013","wgCurRevisionId":26835,"wgRevisionId":26835,"wgArticleId":4738,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["MSP430","EZ430 Development Tools","Microcontroller Projects - MSP430"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Temperature_Recorder_with_eZ430-F2013","wgRelevantArticleId":4738,"wgIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"hidesig":true,"preview":true,"publish":false},"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":false,\"namespaces\":false}"});
+}</script><script>if(window.mw){
+mw.loader.implement("user.options",function($,jQuery){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens",function($,jQuery){mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\"});});
+/* cache key: davincid_wikidb:resourceloader:filter:minify-js:7:a5c52c063dc436c1ca7c9f456936a5e9 */
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","mediawiki.legacy.ajax","skins.vector.js"]);
+}</script><script src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load(4).php"></script>
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/skins/Vector/csshover.min.htc")}</style><![endif]-->
+<script>bazadebezolkohpepadr="1631685140"</script><script type="text/javascript" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/61418a39" defer=""></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Temperature_Recorder_with_eZ430-F2013 skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="localNotice" lang="en" dir="ltr"><p><br>
+<span style="color:#ff0000"><b>Please note as of Wednesday, August 15th, 2018 this wiki has been set to read only. If you are a TI Employee and require Edit ability please contact x0211426 from the company directory.</b></span>
+</p></div></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">Temperature Recorder with eZ430-F2013</span></h1>
+						<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Texas Instruments Wiki</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#mw-head">navigation</a>, 					<a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="hf-nsheader"><script language="Javascript">
+var tiContentGroup;
+var tiwikicat = (typeof(mw.config.values.wgCategories[0]) === "undefined"? "":mw.config.values.wgCategories[0]);
+tiContentGroup = "/MCU/wiki/Ext/" +tiwikicat;
+var tiPageName;
+tiPageName = 'wiki/Temperature_Recorder_with_eZ430-F2013';
+</script></div><div class="hf-header"></div><div class="thumb tright"><div class="thumbinner" style="width:301px;"><a href="http://processors.wiki.ti.com/index.php/File:EZ430Dmodified.PNG" class="image"><img alt="" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/EZ430Dmodified.PNG" width="299" height="172" class="thumbimage"></a>  <div class="thumbcaption"><div class="magnify"><a href="http://processors.wiki.ti.com/index.php/File:EZ430Dmodified.PNG" class="internal" title="Enlarge"></a></div>eZ430-F2013 Temperature Recorder</div></div></div> 
+<p>Office temperature is often a source of contention. After a complaint is made, it may take hours for someone to show up and by then, the temperature has changed.  But traditional temperature recorders are expensive and rare. The Texas Instruments (TI) <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/msp430f2013.html">MSP430F2013</a> in the <a href="http://processors.wiki.ti.com/index.php/EZ430-F2013" title="EZ430-F2013">eZ430-F2013</a> development kit can work as a low cost ($20) temperature recorder.
+</p><p><br>
+</p>
+<div id="toc" class="toc"><div id="toctitle"><h2>Contents</h2><span class="toctoggle">&nbsp;[<a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Operation"><span class="tocnumber">1</span> <span class="toctext">Operation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Measuring_Temperature"><span class="tocnumber">1.1</span> <span class="toctext">Measuring Temperature</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Stopping"><span class="tocnumber">1.2</span> <span class="toctext">Stopping</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Temperature_Report"><span class="tocnumber">1.3</span> <span class="toctext">Temperature Report</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Schematic"><span class="tocnumber">2</span> <span class="toctext">Schematic</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Project_User.27s_Guide"><span class="tocnumber">3</span> <span class="toctext">Project User's Guide</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Install_eZ430-F2013_Kit"><span class="tocnumber">3.1</span> <span class="toctext">Install eZ430-F2013 Kit</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Configure_IAR_Workbench"><span class="tocnumber">3.2</span> <span class="toctext">Configure IAR Workbench</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Dump_the_Time-Temperature"><span class="tocnumber">3.3</span> <span class="toctext">Dump the Time-Temperature</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Reporting_Time-Temperature"><span class="tocnumber">3.4</span> <span class="toctext">Reporting Time-Temperature</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Reset_Recorder"><span class="tocnumber">3.5</span> <span class="toctext">Reset Recorder</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Room_Temperature_Graph"><span class="tocnumber">3.6</span> <span class="toctext">Room Temperature Graph</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-13"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Builder.27s_Guide"><span class="tocnumber">4</span> <span class="toctext">Builder's Guide</span></a>
+<ul>
+<li class="toclevel-2 tocsection-14"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Principles_of_Operation"><span class="tocnumber">4.1</span> <span class="toctext">Principles of Operation</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Hardware_Modifications"><span class="tocnumber">4.2</span> <span class="toctext">Hardware Modifications</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Adding_the_Xtal"><span class="tocnumber">4.3</span> <span class="toctext">Adding the Xtal</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#LiON_Battery_-_2032"><span class="tocnumber">4.4</span> <span class="toctext">LiON Battery  - 2032</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-18"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Software"><span class="tocnumber">5</span> <span class="toctext">Software</span></a>
+<ul>
+<li class="toclevel-2 tocsection-19"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Routine_.E2.80.93_main"><span class="tocnumber">5.1</span> <span class="toctext">Routine – main</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Routine_.E2.80.93_wdt_vector"><span class="tocnumber">5.2</span> <span class="toctext">Routine – wdt_vector</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Routine_.E2.80.93_sd16_vector"><span class="tocnumber">5.3</span> <span class="toctext">Routine – sd16_vector</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Routine_.E2.80.93_gaussian"><span class="tocnumber">5.4</span> <span class="toctext">Routine – gaussian</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Routine_.E2.80.93_flash"><span class="tocnumber">5.5</span> <span class="toctext">Routine – flash</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Errata"><span class="tocnumber">6</span> <span class="toctext">Errata</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Project_Files"><span class="tocnumber">7</span> <span class="toctext">Project Files</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#Bill_of_Materials"><span class="tocnumber">8</span> <span class="toctext">Bill of Materials</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Operation">Operation</span></h2>
+<h3><span class="mw-headline" id="Measuring_Temperature">Measuring Temperature</span></h3>
+<p>Plugging a modified MSP-EZ430D board, the size of a quarter, into a LiON battery flashes the green LED three times over 40 seconds letting you know the battery is good and the part is working. Then it begins writing the temperature to FLASH. Put the battery and microprocessor in a draft-free container like a pill holder, with the starting time and date. FLASH memory holds 281, run-length encoded records with a byte counter for the 8.02 seconds time intervals. Unlikely, it could be filled in 38 minutes to a maximum of 6.5 days.  One office test ran 4 days and still had free FLASH remaining.
+</p>
+<h3><span class="mw-headline" id="Stopping">Stopping</span></h3>
+<p>When FLASH is full, it lights the LED and removing the battery leaves the temperature data in FLASH. To flush the current run-length buffers, change the temperature over a minute by holding it in your closed hand or putting it in a cool space for a minute. 
+</p>
+<h3><span class="mw-headline" id="Temperature_Report">Temperature Report</span></h3>
+<p>Reporting the temperature requires plugging the MSP-EZ430D target board into the MSP-EZ430U debugging interface and using the IAR Embedded Workbench Integrated Development Environment (IDE) to transfer the time and temperature data to a log file. This log file is loaded into a spreadsheet to plot the results.
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Schematic">Schematic</span></h2>
+<p>&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:Schematic-Temp_Sensor.PNG" class="image"><img alt="Schematic-Temp Sensor.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/Schematic-Temp_Sensor.PNG" width="573" height="365"></a> <br><br>
+</p>
+<h2><span class="mw-headline" id="Project_User.27s_Guide">Project User's Guide</span></h2>
+<h3><span class="mw-headline" id="Install_eZ430-F2013_Kit">Install eZ430-F2013 Kit</span></h3>
+<p>Using the CDROM in the kit, install the software and plug in the MSPEZ430U USB debugging device. Windows will prompt to install the USB device driver.  
+</p>
+<h3><span class="mw-headline" id="Configure_IAR_Workbench">Configure IAR Workbench</span></h3>
+<p>Plug in the USB debugging device and start the IAR Embedded Workbench. Click on “Create new project” and enter a name for the pop-up and “Save As” field. After it starts, highlight the project name and use the “Project” pull-down for “Options.” These options setup the IAR system to work.
+</p>
+<ol><li>General Options -&gt; Target -&gt; MSP430x2xx Family -&gt; MSP430F2013 – establishes the memory and interface map and generated code.</li>
+<li>General Options -&gt; Library Options -&gt; Printf -&gt; Small</li>
+<li>Stack/Heap -&gt; Override default -&gt; Stack size = 80 – nominal stack to support printing the results.</li>
+<li>C/C++ compiler -&gt; Optimization -&gt; Size = “High (Maximum optimization)” – needed to keep code as small as possible when resetting the MSP-EZ430D target board.</li>
+<li>Linker -&gt; List -&gt; Generate linker listing -&gt; Segment map -&gt; Module map – protects the recorded time and temperature data.</li>
+<li>Debugger -&gt; Setup -&gt; “FET Debugger” – to enable USB</li>
+<li>	Debugger -&gt; FET Debugger -&gt; “Retain unchanged memory”</li>
+<li>Debugger -&gt; Connection -&gt; TI USB FET – sets the USB device interface.<br></li>
+<li>Add a “file” to the project with the source code for “temp_recorder.c”. You can load it from:</li></ol>
+<p><a rel="nofollow" class="external text" href="http://hiwaay.net/~bzwilson/temp_recorder/">Source Code</a>
+<br><br>
+“Rebuild” the code and enter “debug” mode with the USB debugger plugged in. Then under “View” select “Terminal I/O” which is used to display the data. You can close the source file window and disassembly windows and expand the “Terminal I/O” window. Before dumping the data, use “Debug” and select “Logging” to “Set Terminal I/O Log File.” This file will hold the saved data. Use the file options to save the log file where you can find it easily.
+Once you exit the debugger, you are ready to dump the time and temperature data. 
+</p>
+<h3><span class="mw-headline" id="Dump_the_Time-Temperature">Dump the Time-Temperature</span></h3>
+<ol><li>If the LED is ON, the FLASH is full so remove the MSP-EZ430D board from the battery and install it on the USB debugger. </li>
+<li>If the LED is off, you may want to flush the last temperature values from RAM to FLASH by holding the MSP-EZ430D and battery in your hand for a minute. The change in temperature will write the last values to FLASH. Then move the MSP-EZ430D to the USB debugger.</li>
+<li>Start the IAR Embedded Workbench and “Open the Existing Workspace” project.</li>
+<li>Select the project and check the “FET Debugger” option to make sure it is on “Retain unchanged memory.” </li>
+<li>Enter Debug mode and verify the “Terminal I/O” window is up and “Log file: On”.</li>
+<li>Hit the three arrow “Go” control and watch the time and temperature display on the terminal window.<br></li></ol>
+<p>Each line has an “interval” counter, a comma and “temperature” in 10ths of a degree Fahrenheit. Let it run until it stops. Then exit the debugger. Until you refresh the FLASH memory, the data will remain in the MSP-EZ430D.
+</p>
+<h3><span class="mw-headline" id="Reporting_Time-Temperature">Reporting Time-Temperature</span></h3>
+<p>Using a spreadsheet, load the comma separated values from the Terminal I/O log file. Every pair of lines has an interval counter and the same temperature. The time counter is how many 8.02 second timer intervals for that temperature. <br>For example:<br>
+</p>
+<ol><li>0,776</li>
+<li>10,776</li>
+<li>10,768</li>
+<li>15,768<br></li></ol>
+<p>The first temperature interval lasted to 10*8.02 seconds, 80.2 seconds at 76.6F. The second time interval started at 80.2 seconds to 15*8.02 or 120.3 seconds at 76.8F.<br>
+Once you have the data in a spreadsheet, use the starting time from the slip of paper and calculate the remaining time values from the offsets and divide the temperature by 10 to degrees Fahrenheit. This will give you two columns with time and temperature to plot the data. <br>For example:
+</p><p><br><a href="http://processors.wiki.ti.com/index.php/File:ExamplePlot.PNG" class="image"><img alt="ExamplePlot.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/ExamplePlot.PNG" width="663" height="456"></a>
+</p><p>This example shows the temperature plotted from room temperature to a thermos of boiling hot water. Cold water was added to bring the temperature down and then the watertight container was removed back to room temperature. Meanwhile, the thermos was drained and ice from the freezer put in the thermos and the container put back in the thermos. Eventually the ice began melting, I pulled the temperature recorder out to add more water and put it back in. Finally, it was left on the table to warm.
+</p>
+<h3><span class="mw-headline" id="Reset_Recorder">Reset Recorder</span></h3>
+<p>To reuse the temperature recorder for other measurements, modify the project option, FET Debugger, to “Erase main and Information memory.” Then entering debug mode will reload the code and reset the FLASH for the next temperature measurement.
+</p>
+<h3><span class="mw-headline" id="Room_Temperature_Graph">Room Temperature Graph</span></h3>
+<p>The following graph was recorded from 10:00 AM Monday morning to 10:00 AM Friday morning at my desk. The initial drop in temperature came because I had carried the unit in a pocket but it rapidly cooled off once plugged into the battery.
+The office temperature problem was the system wasn’t turned on until 8:00 AM instead of an hour before the official work hours. With the data, we contacted facilities and since then, the morning office temperatures have improved:
+</p><p><a href="http://processors.wiki.ti.com/index.php/File:RoomTempGraphExample.PNG" class="image"><img alt="RoomTempGraphExample.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/RoomTempGraphExample.PNG" width="780" height="515"></a>
+</p><p><br>
+</p>
+<h2><span class="mw-headline" id="Builder.27s_Guide">Builder's Guide</span></h2>
+<h3><span class="mw-headline" id="Principles_of_Operation">Principles of Operation</span></h3>
+<p>The <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/msp430f2013.html">MSP430F2013</a> has a 16-bit ADC with a built-in temperature sensor but it needs a 32.687 kHz watch crystal to keep accurate time. The 16-bit RISC processor has 2 kB of FLASH and 256 B of RAM. The FLASH memory holds both the software and data. 
+</p>
+<h3><span class="mw-headline" id="Hardware_Modifications">Hardware Modifications</span></h3>
+<p>A proof of concept, this is not designed for mass market production but something anyone could on their own. The schematics and physical MSP-EZ430D drawings came from the Texas Instruments documentation and are used to show the modifications needed.
+</p>
+<h3><span class="mw-headline" id="Adding_the_Xtal">Adding the Xtal</span></h3>
+<p>The first step is to add a watch crystal to the MSP-EZ430D. <br>
+&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:Schematic-Temp_Sensor.PNG" class="image"><img alt="Schematic-Temp Sensor.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/Schematic-Temp_Sensor.PNG" width="573" height="365"></a> <br><br>
+</p><p>The VCC needs to between 3.6-2.2 VDC. The 2.2 VDC lower limit is needed to support writing to FLASH. The watch crystal with grounded case needs to go on pins P12, P13 and P14.
+</p>
+<pre><a href="http://processors.wiki.ti.com/index.php/File:TargetBoardF2013.PNG" class="image"><img alt="TargetBoardF2013.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/TargetBoardF2013.PNG" width="309" height="236"></a> 
+</pre>
+<p>The board sketch shows the typical placement of the watch crystal. This location minimizes the height. Although the prototype was not conformal coated, it is recommended if going into a condensing environment.
+</p><p><br>
+</p><p>The following photo shows the watch crystal installed on the MSP-EZ430D:
+<br>
+&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:EZ430D.PNG" class="image"><img alt="EZ430D.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/EZ430D.PNG" width="294" height="144"></a> <br><br>
+</p>
+<h3><span class="mw-headline" id="LiON_Battery_-_2032">LiON Battery  - 2032</span></h3>
+<p>Any 3-3.6 VDC battery can provide power for the <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/msp430f2013.html">MSP430F2013</a>. In our example, a bead of epoxy spackling is used to hold the B+ and ground wires as a low cost connector. A paper washer separates the epoxy from the connector during the cure.
+<br>
+&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:EZ430Dmodified.PNG" class="image"><img alt="EZ430Dmodified.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/EZ430Dmodified.PNG" width="299" height="172"></a> <br><br>
+</p><p>The wire loop is cut, a piece of heat-shrink is put over the ground wire and a solder bead i.e. put on each end.  Bend the wire leads 90 degrees at the connector and put a drop of clear epoxy to hold. Finally, a 1/2-inch piece of clear heat shrink holds the homemade connector to the battery.
+</p><p>Note that the MSP-EZ430D can work connected to the USB debugger interface. However, this potentially exposes it to laptop heat and the USB debugger is temperature limited to 80C.
+</p><p><br>
+&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:TempSense.PNG" class="image"><img alt="TempSense.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/TempSense.PNG" width="300" height="254"></a> <br><br>
+</p>
+<h2><span class="mw-headline" id="Software">Software</span></h2>
+<p>The software consists of a main routine that handles initialization and later, printing the results. The watchdog timer is configured as an interval timer driven by the watch crystal and it initiates all measurements. The SD16 interrupts update the RAM cached, with the run-length encoded time and temperature records. 
+</p>
+<h3><span class="mw-headline" id="Routine_.E2.80.93_main">Routine – main</span></h3>
+<p>Entered from a power-on reset, RAM is zeroed and all interfaces are in their default state. Main converts the watchdog timer into a watch crystal driven, interval timer running at the slowest possible rate, 8.02 seconds per interrupt.
+The main routine finds the free FLASH memory after the code and checks to see if it is unused. If it is unused, it enables the DCO timer for FLASH memory writes. Finally, it enables the LED for the first time interval and goes into LM3, low power, sleep mode. The interrupt service routine will flash the LED three times as it completes initialization.
+If the FLASH memory has been written, it begins printing out the run-length encoded time and temperature values.  This requires the USB debugger to be plugged in and the Terminal I/O window open and logging the results.
+</p>
+<h3><span class="mw-headline" id="Routine_.E2.80.93_wdt_vector">Routine – wdt_vector</span></h3>
+<p>The watchdog ISR initially loads a five element, Gaussian filter array with the temperature measurements. As each entry is read, the LED changes, flipping from ON-to-OFF and back. This generates three 8.02-second LED flashes indicating the battery and processor are working. Once the first FLASH word is written, the flashing stops.
+The watchdog timer works as an interval timer and calls routine start_adc to measure the built-in temperature sensor.  Once the ADC measurement is started, it dismisses the interrupt and goes back to LPM3 sleep while the SD16 works.
+</p>
+<h3><span class="mw-headline" id="Routine_.E2.80.93_sd16_vector">Routine – sd16_vector</span></h3>
+<p>This routine gets the temperature reading and then measures the “zero” value. The “zero” value is subtracted from the temperature measurement and then it is scaled by shifting and the random, low order three bits removed. 
+</p>
+<h3><span class="mw-headline" id="Routine_.E2.80.93_gaussian">Routine – gaussian</span></h3>
+<p>This routine adds each new temperature to a five cell, Gaussian filter. This filter smooths the data yet preserves the local peaks. It essentially extends the resolution as close to the thermal noise range as possible. The results are then sent to routine flash.
+</p>
+<h3><span class="mw-headline" id="Routine_.E2.80.93_flash">Routine – flash</span></h3>
+<p>The flash routine maintains three run-length encoding buffers. These hold the current lowest, middle and highest temperature values with a byte counter for how many samples came in with each value. Any value that matches the current low, middle or high temperatures simply increment the run-length counter.
+</p><p>When the byte counter is ready to wrap, the buffer is written to the next free FLASH memory word as a byte counter and byte temperature value. Should a new low temperature arrive, the current high temperature buffer is scheduled for FLASH write; the middle becomes the new high; the former low becomes the new middle; and the new low starts a new low record. It shifts the run-length buffers up and writes the former hot record. A new high temperature shifts the run-length buffers down and writes the former cold record. 
+</p>
+<h2><span class="mw-headline" id="Errata">Errata</span></h2>
+<ol><li>The initial calibration of 32F in an ice water batch was done with the USB adapter on an extended USB cable. Subsequent tests on battery power reports the ice water bath at 28F.  This suggests calibration may need code to deal with different voltage levels.</li>
+<li>One USB FET Debugger was destroyed by high temperature in a steam filled thermos. The last recorded temperature was 158F.</li>
+<li>The <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/msp430f2013.html">MSP430F2013</a> survived a 100C, boiling-water-filled thermos on battery power.</li>
+<li>The LiON batteries have a narrower operational temperature range than the <a rel="nofollow" class="external text" href="http://focus.ti.com/docs/prod/folders/print/msp430f2013.html">MSP430F2013</a> but the power drain is so low that this does not seem to matter.</li>
+<li>The Digitally Controlled Oscillator is used to generate the 256 kHz needed to write to flash. It isn’t clear if this can be turned on and off at will.</li>
+<li>By accident, FLASH was once written using the 32.687 kHz clock. The specifications say it should not be done but we don’t know what the effects would be nor do we know the power required to write to flash.</li>
+<li>When the FLASH is full, the LED turns solid green but this wastes battery power. A better approach would be to flash the LED but that takes code and reduces the available memory. Batteries are cheap compared to the data.</li>
+<li>The current print routine library takes FLASH memory and can be replaced by a lower footprint software interface. However, this would require a more complex output reader like a photo-diode detector on a serial line. </li></ol>
+<p><br>
+</p>
+<h2><span class="mw-headline" id="Project_Files">Project Files</span></h2>
+<p><a rel="nofollow" class="external text" href="http://pastebin.com/Znnk3kgJ">Temperature Recorder Source Code</a>
+</p>
+<h2><span class="mw-headline" id="Bill_of_Materials">Bill of Materials</span></h2>
+<p><br>
+&nbsp; <a href="http://processors.wiki.ti.com/index.php/File:BOM.PNG" class="image"><img alt="BOM.PNG" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/BOM.PNG" width="1171" height="252"></a> <br><br>
+</p><p>The homebrew, epoxy connector can be replaced by a Mill-MAX, single-row, .050” grid interconnect, Allied Electronics part 900-2000, $5.18, enough for 10 cells.
+</p><p>The heat-shrink, coin cell holder could be replaced by a coin cell specific holder. Typical prices are ~$1.00 each from Allied Electronics but need to be matched to the specific coin cell and end packaging.
+</p><p>A water tight, metal pill fob with internal ¾” diameter, 19.5 mm, is available from local pharmacies for about $5.00 for (See <a rel="nofollow" class="external autonumber" href="http://www.jfainc.com/pillfob.html">[1]</a> ). Even without a little sandpaper trimming, it will fit but a smaller than 20 mm diameter button cell will be needed.
+</p>
+<!-- 
+NewPP limit report
+CPU time usage: 0.060 seconds
+Real time usage: 0.179 seconds
+Preprocessor visited node count: 103/1000000
+Preprocessor generated node count: 108/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/40
+Expensive parser function count: 0/100
+-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 - -total
+-->
+
+<!-- Saved in parser cache with key davincid_wikidb:pcache:idhash:4738-0!*!0!!en!5!* and timestamp 20190518101855 and revision id 26835
+ -->
+<div class="hf-footer"></div><div class="hf-nsfooter"><table style="text-align:center; background:white; width:100%; text-align:left; height: 65px border-top: 1px solid; border-bottom: 1px solid; border-left: 1px solid; border-right: 1px solid; border-width: 1px; border-style: solid;">
+<tbody><tr>
+<td width="305px"><a href="http://processors.wiki.ti.com/index.php/File:E2e.jpg" class="image"><img alt="E2e.jpg" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/E2e.jpg" width="305" height="63"></a>
+</td>
+<td><i>For technical support on MSP430 please post your questions on <a rel="nofollow" class="external text" href="http://e2e.ti.com/support/microcontrollers/msp43016-bit_ultra-low_power_mcus/default.aspx">The MSP430 Forum</a>. Please post only comments about the article <b>Temperature Recorder with eZ430-F2013</b> here.</i>
+</td></tr></tbody></table>
+<table style="border-style:solid; border-width:1px; text-align:center; width:100%;">
+
+<tbody><tr style="font-size:150%;">
+<td rowspan="2"> <a href="http://processors.wiki.ti.com/index.php/File:Hyperlink_blue.png" class="image"><img alt="Hyperlink blue.png" src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/Hyperlink_blue.png" width="96" height="96"></a>
+</td>
+<td><b>Links</b>
+</td></tr>
+<tr>
+<td>
+<table style="text-align: left;">
+<tbody><tr>
+<td style="padding-right: 10px; vertical-align: top;">
+<p><a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/amplifier_and_linear.page">Amplifiers &amp; Linear</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/audio/audio_overview.page">Audio</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/rfif.page">Broadband RF/IF &amp; Digital Radio</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/clocksandtimers/clocks_and_timers.page">Clocks &amp; Timers</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/dataconverters/data_converter.page">Data Converters</a>
+</p>
+</td>
+<td style="padding-right: 10px; vertical-align: top;">
+<p><a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/mems/mems.page">DLP &amp; MEMS</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/high_reliability.page">High-Reliability</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/interface/interface.page">Interface</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/logic/home_overview.page">Logic</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/powermanagement/power_portal.page">Power Management</a>
+</p>
+</td>
+<td style="padding-right: 10px; vertical-align: top;">
+<p><a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/dsp/embedded_processor.page">Processors</a>
+</p>
+<ul><li> <a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/dsp/arm.page">ARM Processors</a></li>
+<li> <a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/dsp/home.page">Digital Signal Processors (DSP)</a></li>
+<li> <a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/microcontroller/home.page">Microcontrollers (MCU)</a></li>
+<li> <a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/omap-applications-processors/the-omap-experience.page">OMAP Applications Processors</a></li></ul>
+</td>
+<td style="padding-right: 10px; vertical-align: top;">
+<p><a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/switches_and_multiplexers.page">Switches &amp; Multiplexers</a><br>
+<a rel="nofollow" class="external text" href="http://www.ti.com/lsds/ti/analog/temperature_sensor.page">Temperature Sensors &amp; Control ICs</a><br>
+<a rel="nofollow" class="external text" href="http://focus.ti.com/wireless/docs/wirelessoverview.tsp?familyId=2003&amp;sectionId=646&amp;tabId=2735">Wireless Connectivity</a>
+</p>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<p><!-- HitBox Sub accounts Code START -->
+<script src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/analytics.js.download" type="text/javascript" charset="utf-8"></script>
+<!-- HitBox Sub accounts Code END -->
+</p>
+<div id="tiPrivacy"></div>
+</div></div>									<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;oldid=26835">http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;oldid=26835</a>"					</div>
+													<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://processors.wiki.ti.com/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="http://processors.wiki.ti.com/index.php/Category:MSP430" title="Category:MSP430">MSP430</a></li><li><a href="http://processors.wiki.ti.com/index.php/Category:EZ430_Development_Tools" title="Category:EZ430 Development Tools">EZ430 Development Tools</a></li><li><a href="http://processors.wiki.ti.com/index.php/Category:Microcontroller_Projects_-_MSP430" title="Category:Microcontroller Projects - MSP430">Microcontroller Projects - MSP430</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-login"><a href="http://processors.wiki.ti.com/index.php?title=Special:UserLogin&amp;returnto=Temperature+Recorder+with+eZ430-F2013" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o">Log in</a></li><li id="pt-createaccount"><a href="http://processors.wiki.ti.com/index.php/Special:RequestAccount" title="You are encouraged to create an account and log in; however, it is not mandatory">Request account</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li id="ca-nstab-main" class="selected"><span><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013" title="View the content page [alt-shift-c]" accesskey="c">Page</a></span></li>
+															<li id="ca-talk"><span><a href="http://processors.wiki.ti.com/index.php/Talk:Temperature_Recorder_with_eZ430-F2013" title="Discussion about the content page [alt-shift-t]" accesskey="t">Discussion</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0"><span>Variants</span><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#" tabindex="-1"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013">Read</a></span></li>
+															<li id="ca-viewsource"><span><a href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e">View source</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label" style="">
+						<h3 id="p-cactions-label" tabindex="0"><span>More</span><a href="http://processors.wiki.ti.com/index.php/Temperature_Recorder_with_eZ430-F2013#" tabindex="-1"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="http://processors.wiki.ti.com/index.php" id="searchform">
+														<div id="simpleSearch">
+															<input type="search" name="search" placeholder="Search" title="Search Texas Instruments Wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if exists" id="searchButton" class="searchButton">								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="http://processors.wiki.ti.com/index.php/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal first" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-mainpage"><a href="http://processors.wiki.ti.com/index.php/Main_Page" title="Visit the main page [alt-shift-z]" accesskey="z">Main Page</a></li>
+													<li id="n-All-pages"><a href="http://processors.wiki.ti.com/index.php/Special:AllPages">All pages</a></li>
+													<li id="n-All-categories"><a href="http://processors.wiki.ti.com/index.php/Special:Categories">All categories</a></li>
+													<li id="n-recentchanges"><a href="http://processors.wiki.ti.com/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r">Recent changes</a></li>
+													<li id="n-randompage"><a href="http://processors.wiki.ti.com/index.php/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x">Random page</a></li>
+													<li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+
+			<div class="body">
+									<ul>
+													<li id="coll-create_a_book"><a href="http://processors.wiki.ti.com/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Temperature+Recorder+with+eZ430-F2013">Create a book</a></li>
+													<li id="coll-download-as-rl"><a href="http://processors.wiki.ti.com/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Temperature+Recorder+with+eZ430-F2013&amp;oldid=26835&amp;writer=rl">Download as PDF</a></li>
+													<li id="t-print"><a href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;printable=yes" title="Printable version of this page [alt-shift-p]" accesskey="p">Printable version</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Toolbox</h3>
+
+			<div class="body">
+									<ul>
+													<li id="t-whatlinkshere"><a href="http://processors.wiki.ti.com/index.php/Special:WhatLinksHere/Temperature_Recorder_with_eZ430-F2013" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j">What links here</a></li>
+													<li id="t-recentchangeslinked"><a href="http://processors.wiki.ti.com/index.php/Special:RecentChangesLinked/Temperature_Recorder_with_eZ430-F2013" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k">Related changes</a></li>
+													<li id="t-specialpages"><a href="http://processors.wiki.ti.com/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q">Special pages</a></li>
+													<li id="t-permalink"><a href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;oldid=26835" title="Permanent link to this revision of the page">Permanent link</a></li>
+													<li id="t-info"><a href="http://processors.wiki.ti.com/index.php?title=Temperature_Recorder_with_eZ430-F2013&amp;action=info" title="More information about this page">Page information</a></li>
+											</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 1 April 2010, at 17:39.</li>
+											<li id="footer-info-viewcount">This page has been accessed 7,898 times.</li>
+											<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a> unless otherwise noted.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://processors.wiki.ti.com/index.php/Project:Privacy_policy" title="Project:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://processors.wiki.ti.com/index.php/Project:About" title="Project:About">About Texas Instruments Wiki</a></li>
+											<li id="footer-places-disclaimer"><a href="http://processors.wiki.ti.com/index.php/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-termsofservice"><a href="http://processors.wiki.ti.com/index.php/Project:Terms_of_Service" title="Project:Terms of Service">Terms of Use</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+															<a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/cc-by-sa.png" alt="Creative Commons Attribution-ShareAlike" width="88" height="31"></a>
+													</li>
+											<li id="footer-poweredbyico">
+															<a href="http://www.mediawiki.org/"><img src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>
+													</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>if(window.jQuery)jQuery.ready();</script><script>if(window.mw){
+mw.loader.state({"site":"loading","user":"ready","user.groups":"ready"});
+}</script>
+<script>if(window.mw){
+mw.loader.load(["mediawiki.toc","mediawiki.action.view.postEdit","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest"],null,true);
+}</script>
+<script>if(window.mw){
+document.write("\u003Cscript src=\"http://processors.wiki.ti.com/load.php?debug=false\u0026amp;lang=en\u0026amp;modules=site\u0026amp;only=scripts\u0026amp;skin=vector\u0026amp;*\"\u003E\u003C/script\u003E");
+}</script><script src="./Temperature Recorder with eZ430-F2013 - Texas Instruments Wiki_files/load(5).php"></script>
+<script>if(window.mw){
+mw.config.set({"wgBackendResponseTime":390});
+}</script>
+	<noscript><img src="http://processors.wiki.ti.com/akam/10/pixel_61418a39?a=dD01ZmNhNThmMDBiYjQzMTJmNjc2N2E1M2Q2MWJiNzRlZjhiYzIxNDhkJmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript>
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

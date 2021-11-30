@@ -1,0 +1,10 @@
+.\exe\btn_maid_1.o: ..\Src\Display\btn_maid_1.c
+.\exe\btn_maid_1.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\exe\btn_maid_1.o: ..\Inc\Resource.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\GUI.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\GUI_ConfDefaults.h
+.\exe\btn_maid_1.o: ..\Inc\GUIConf.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\GUI_Type.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\LCD.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\Global.h
+.\exe\btn_maid_1.o: ..\Middlewares\ST\STemWin\inc\GUI_Version.h

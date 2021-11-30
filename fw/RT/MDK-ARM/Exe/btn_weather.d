@@ -1,0 +1,10 @@
+.\exe\btn_weather.o: ..\Src\Display\btn_weather.c
+.\exe\btn_weather.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\exe\btn_weather.o: ..\Inc\Resource.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\GUI.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\GUI_ConfDefaults.h
+.\exe\btn_weather.o: ..\Inc\GUIConf.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\GUI_Type.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\LCD.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\Global.h
+.\exe\btn_weather.o: ..\Middlewares\ST\STemWin\inc\GUI_Version.h

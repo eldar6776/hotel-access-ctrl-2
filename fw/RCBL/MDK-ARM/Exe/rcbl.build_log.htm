@@ -1,0 +1,96 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: first_name last_name, company_name, LIC=MGX30-BE3Q0-KSMYM-XJNFS-GD9AV-4XK1G
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.29.0.0
+Toolchain Path:  C:\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.13.1
+Assembler:       Armasm.exe V6.13.1
+Linker/Locator:  ArmLink.exe V6.13.1
+Library Manager: ArmAr.exe V6.13.1
+Hex Converter:   FromElf.exe V6.13.1
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM\RCBL_RC1.uvprojx
+Project File Date:  08/15/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.13.1', folder: 'C:\Keil\ARM\ARMCLANG\Bin'
+Rebuild target 'RCBL_BETA'
+Before Build - User command #1: Run\fwbuild.bat
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>for /F "tokens=1,2,3,4 delims=/ " %a in ("sri 07. 10. 2020.") do set wday=%a  & set day=%b  & set month=%c  & set year=%d 
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>set wday=sri  & set day=07.  & set month=10.  & set year=2020. 
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>for /F "tokens=1,2,3 delims=:" %a in ("04:54:05,75") do set hour=%a  & set minute=%b  & set seconds=%c 
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>set hour=04  & set minute=54  & set seconds=05,75 
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>(
+echo #define FW_DATE                                	0x00201007  
+ echo #define FW_TIME                        			0x00045405  
+) 1>"..\..\Common\fwbuild.h" 
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>cscript ..\..\Common\fwbuild.vbs 
+Microsoft (R) Windows Script Host Version 5.812
+Copyright (C) Microsoft Corporation. All rights reserved.
+F:\ProjektiOtvoreni\HotelVucko\fw\VUCKO_RC1\RCBL\MDK-ARM>..\..\Common\incbild.exe "..\..\Common\common.h" 
+compiling stm32f1xx_hal_tim.c...
+compiling system_stm32f1xx.c...
+compiling stm32f1xx_hal_rtc_ex.c...
+compiling stm32f1xx_hal_iwdg.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_spi.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_rtc.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_spi_ex.c...
+compiling stm32f1xx_hal_i2c.c...
+assembling startup_stm32f103xb.s...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_crc.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_flash.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling main.c...
+compiling common.c...
+linking...
+Program Size: Code=6830 RO-data=1378 RW-data=0 ZI-data=8416  
+FromELF: creating hex file...
+After Build - User command #1: Run\rcbl.bat
+".\Exe\rcbl.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_RCBL_BETA
+  F:\Repository\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  F:\Repository\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

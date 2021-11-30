@@ -1,0 +1,10 @@
+.\exe\snow.o: ..\Src\Display\snow.c
+.\exe\snow.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
+.\exe\snow.o: ..\Inc\Resource.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\GUI.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\GUI_ConfDefaults.h
+.\exe\snow.o: ..\Inc\GUIConf.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\GUI_Type.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\LCD.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\Global.h
+.\exe\snow.o: ..\Middlewares\ST\STemWin\inc\GUI_Version.h
